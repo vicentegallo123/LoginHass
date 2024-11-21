@@ -1,0 +1,4 @@
+-instalar expo
+-instalar npm
+-instalar mysql
+-instalar cripto
