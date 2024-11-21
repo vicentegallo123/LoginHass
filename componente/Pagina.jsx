@@ -1,13 +1,18 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
+import { View, Text, StyleSheet, Image, ScrollView, Button } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const Pagina = () => {
+  const navigation = useNavigation();
+  
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Introducción a la Ciberseguridad</Text>
       
       <Image
-        source={{ uri: "https://www.ciscopress.com/common/images/content/generic-ebook/cybersecurity-cyber-threats.jpg" }}
+        source={{
+          uri: "https://www.ciscopress.com/common/images/content/generic-ebook/cybersecurity-cyber-threats.jpg",
+        }}
         style={styles.image}
       />
       
@@ -64,6 +69,8 @@ const Pagina = () => {
           <Text style={styles.text}>5. Realizar copias de seguridad periódicas</Text>
         </View>
       </View>
+      
+      <Button title="Volver" color="#4682B4" onPress={() => navigation.goBack()} />
     </ScrollView>
   );
 };
